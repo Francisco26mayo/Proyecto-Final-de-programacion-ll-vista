@@ -1,0 +1,87 @@
+﻿@model IEnumerable<BIBLIOTECA.Libros>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>seccion de Libro</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Signatura_topografica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Isbn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_Tipo_bibliografia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Autores)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.editora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.año_publicacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ciencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Idioma)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Signatura_topografica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Isbn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_Tipo_bibliografia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Autores)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.editora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.año_publicacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ciencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Idioma)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
