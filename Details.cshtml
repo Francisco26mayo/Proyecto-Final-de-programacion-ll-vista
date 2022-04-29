@@ -1,0 +1,98 @@
+﻿@model BIBLIOTECA.Libros
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Libros</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Signatura_topografica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Signatura_topografica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Isbn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Isbn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C_Tipo_bibliografia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_Tipo_bibliografia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Autores)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Autores)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.editora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.editora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.año_publicacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.año_publicacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ciencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ciencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Idioma)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idioma)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
